@@ -1,0 +1,32 @@
+<div class="container"> 
+  <div class="row"> 
+    <div class="col-2"></div>
+    <div class="col-8">
+      <h2>Order Details</h2> 
+
+<hr/>
+<div *ngIf="user">
+  <div>
+    <label><b>First Name: </b></label> {{user.first_name}}
+  </div>
+  <div>
+    <label><b>Email Id: </b></label> {{user.email_id}}
+  </div>  
+  <div>
+    <label><b>Contact: </b></label> {{user.contact}}
+  </div> 
+  <div>
+    <label><b>Price: </b></label> {{user.price}}
+  </div> 
+  <div>
+    <label><b>Address: </b></label> {{user.last_name}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Order List</button><br>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
