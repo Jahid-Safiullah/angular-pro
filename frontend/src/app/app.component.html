@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-sm  navbar-dark d-flex justify-content-center fs-4 fw-bold " style="background-color: rgb(140, 0, 0); align-items: center;">
+  <!-- Links -->
+  
+    <div class="container-fluid">
+      <a class="navbar-brand fs-2" href="#">
+        <img src="blood_logo.png" alt=""  class="d-inline-block ">
+        BLOOD VESSEL
+      </a>
+    </div>
+  
+  
+  <div style="padding-right: 400px;">
+  <ul class="navbar-nav " >
+
+    <li class="nav-item ">
+      <a routerLink="app-home" class="nav-link text-decoration-none" 
+             routerLinkActive="active">Home</a>
+    </li>
+   
+   
+    <li class="nav-item dropdown ">
+      <a class="nav-link dropdown-toggle text-decoration-none " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Learn about Blood
+      </a>
+      <ul class="dropdown-menu ">
+        <li><a class="dropdown-item text-decoration-none " routerLink="app-learn-blood">Who can give blood?</a></li>
+        <li><a class="dropdown-item text-decoration-none"routerLink="app-donate-disability">Donors Disability</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item text-decoration-none" routerLink="app-about-blood active">About Blood</a></li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-decoration-none" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Recipient
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item text-decoration-none" routerLink="category-add">Recipient Blood</a></li>
+        <li><a class="dropdown-item text-decoration-none" routerLink="manage-category">Recipient Plasma</a></li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-decoration-none" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Donate 
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item text-decoration-none" routerLink="/add">Donate Blood</a></li>
+        <li><a class="dropdown-item text-decoration-none" routerLink="/add">Donate Plasma</a></li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link  text-decoration-none" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Deshboard
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item text-decoration-none" routerLink="users"> Blood Donor List</a></li>
+        <li><a class="dropdown-item text-decoration-none" routerLink="users">Plasma Donor List</a></li>
+      </ul>
+    </li>
+  
+  </ul>
+</div>
+</nav>
+<div class="container">
+  <br>
+  <hr>  
+  <div class="card">
+    <div class="card-body">
+  <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <app-footer></app-footer>
+</footer>

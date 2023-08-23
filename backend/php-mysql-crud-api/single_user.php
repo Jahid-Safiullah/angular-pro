@@ -22,7 +22,7 @@
             "last_name" => $item->last_name,
             "email_id" => $item->email_id,
             "contact" => $item->contact,
-            "price" => $item->price,
+            "blood" => $item->blood,
         );
       
         http_response_code(200);

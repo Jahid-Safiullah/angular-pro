@@ -13,7 +13,7 @@
         public $last_name;
         public $email_id;
         public $contact;
-        public $price;
+        public $blood;
       
         // db conn
         public function __construct($db){
@@ -22,7 +22,7 @@
 
         // GET Users
         public function getUsers(){
-            $sqlQuery = "SELECT id, first_name, last_name, email_id, contact, price
+            $sqlQuery = "SELECT id, first_name, last_name, email_id, contact, blood
                FROM " . $this->dbTable . "";
             $stmt = $this->conn->prepare($sqlQuery);
             $stmt->execute();
@@ -38,7 +38,7 @@
                     last_name = :last_name, 
                     email_id = :email_id,
                     contact = :contact,
-                    price = :price";
+                    blood = :blood";
         
             $stmt = $this->conn->prepare($sqlQuery);
         
@@ -47,14 +47,14 @@
             $this->last_name=htmlspecialchars(strip_tags($this->last_name));
             $this->email_id=htmlspecialchars(strip_tags($this->email_id));
             $this->contact=htmlspecialchars(strip_tags($this->contact));
-            $this->price=htmlspecialchars(strip_tags($this->price));
+            $this->blood=htmlspecialchars(strip_tags($this->blood));
                    
             // bind data
             $stmt->bindParam(":first_name", $this->first_name);
             $stmt->bindParam(":last_name", $this->last_name);
             $stmt->bindParam(":email_id", $this->email_id);
             $stmt->bindParam(":contact", $this->contact);
-            $stmt->bindParam(":price", $this->price);
+            $stmt->bindParam(":blood", $this->blood);
            
         
             if($stmt->execute()){
@@ -71,7 +71,7 @@
                     last_name, 
                     email_id,
                     contact,
-                    price
+                    blood
                   FROM
                     ". $this->dbTable ."
                 WHERE 
@@ -90,7 +90,7 @@
         $this->last_name = $dataRow['last_name'];
         $this->email_id = $dataRow['email_id'];
         $this->contact = $dataRow['contact'];
-        $this->price = $dataRow['price'];
+        $this->blood = $dataRow['blood'];
       
     }      
         
@@ -104,7 +104,7 @@
                     last_name = :last_name, 
                     email_id = :email_id,
                     contact = :contact,
-                    price = :price
+                    blood = :blood
                     WHERE 
                         id = :id";
         
@@ -114,7 +114,7 @@
             $this->last_name=htmlspecialchars(strip_tags($this->last_name));
             $this->email_id=htmlspecialchars(strip_tags($this->email_id));
             $this->contact=htmlspecialchars(strip_tags($this->contact));
-            $this->price=htmlspecialchars(strip_tags($this->price));
+            $this->blood=htmlspecialchars(strip_tags($this->blood));
             $this->id=htmlspecialchars(strip_tags($this->id));
         
             // bind data
@@ -122,7 +122,7 @@
             $stmt->bindParam(":last_name", $this->last_name);
             $stmt->bindParam(":email_id", $this->email_id);
             $stmt->bindParam(":contact", $this->contact);
-            $stmt->bindParam(":price", $this->price);
+            $stmt->bindParam(":blood", $this->blood);
             $stmt->bindParam(":id", $this->id);
         
             if($stmt->execute()){

@@ -21,7 +21,7 @@
     $item->last_name = $data->last_name;
     $item->email_id = $data->email_id;
     $item->contact = $data->contact;
-    $item->price = $data->price;
+    $item->blood = $data->blood;
       
     if($item->createUser()){
         echo json_encode("User created.");

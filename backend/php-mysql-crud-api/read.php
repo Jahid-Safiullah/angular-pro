@@ -27,7 +27,7 @@
                 "last_name" => $last_name,
                 "email_id" => $email_id,
                 "contact" => $contact,
-                "price" => $price
+                "blood" => $blood
             );
 
             array_push($userArr, $e);
